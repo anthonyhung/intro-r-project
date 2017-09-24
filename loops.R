@@ -62,6 +62,7 @@ print_N <- function(N){
   print(i)}
 }
 
+#takes mean of each column
 patient_mean_function <- function(filename){
   dat <- read.csv(filename,header=F)
   rows_cols <- dim(dat)
@@ -74,3 +75,32 @@ patient_mean_function <- function(filename){
 }
 
 patient_mean_function("data/inflammation-01.csv")
+
+
+
+day_mean_function <- function(filename){
+  dat <- read.csv(filename,header=F)
+  dat <- as.matrix(dat)
+  rows_cols <- dim(dat)
+  dat_rows <- rows_cols[1]
+  print(dat_rows)
+  means <- c()
+  print(means)
+  for(i in 1:dat_rows){
+    means <- c(means, mean(dat[i,]))
+  }
+  plot(means,main = filename)
+}
+
+day_mean_function("data/inflammation-01.csv")
+
+
+
+
+
+
+##########Writing plots - pdf() and then put in the plots, dev.off() to stop writing
+pdf("inflammation-02.pdf")
+analyze("data/inflammation-02.csv")
+analyze("data/inflammation-01.csv")
+dev.off()

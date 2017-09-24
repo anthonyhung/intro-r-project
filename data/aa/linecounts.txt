@@ -1,0 +1,11 @@
+       1 ./chapter_1.txt
+       1 ./committee_meeting/chpt2.txt
+       5 ./committee_meeting/presentation_notes.txt
+      24 ./haiku.txt
+       0 ./thesis/chpt1.txt
+      31 total
+       3 ./committee_meeting/future_directions.md
+       0 ./committee_meeting/possible_pitfalls.md
+       1 ./committee_meeting/pres_notes.md
+       0 ./directions.md
+       4 total
